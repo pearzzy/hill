@@ -2,7 +2,7 @@
 
 ## 🧑‍🎓 Integrantes
 
-* Integrante 1
+* Vinícius Pereira de Castro - 24019645
 * Integrante 2
 * Integrante 3
 
