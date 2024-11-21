@@ -1,1 +1,30 @@
+O programa implementa a cifra de Hill em C para criptografar e descriptografar mensagens. Abaixo estão as funções principais e seus propósitos:
 
+`stringLength`
+- Calcula o comprimento de uma string manualmente, iterando até o caractere nulo (`'\0'`).
+- Essencial para determinar o tamanho da mensagem.
+
+`determinant`
+- Calcula o determinante de uma matriz 2x2 usando a fórmula \( a \cdot d - b \cdot c \).
+- Necessário para calcular a matriz inversa na decifragem.
+
+`modInverse`
+- Encontra o inverso modular de um número no módulo 26, usado para calcular a matriz inversa.
+- Itera até encontrar \( (a \cdot x) \mod 26 = 1 \).
+
+`multiplyMatrixVector`
+- Realiza a multiplicação de uma matriz 2x2 por um vetor de 2 elementos e ajusta o resultado ao intervalo alfabético (módulo 26).
+- Central na cifragem e decifragem.
+
+`encrypt`
+- Cifra o texto original:
+  - Divide a mensagem em blocos de 2 caracteres.
+  - Converte caracteres em valores numéricos (\( A = 0, ..., Z = 25 \)).
+  - Multiplica os blocos pela matriz-chave e converte o resultado de volta em caracteres.
+
+`decrypt`
+- Descriptografa o texto cifrado:
+  - Calcula a matriz inversa da chave com o determinante e o inverso modular.
+  - Multiplica os blocos do texto cifrado pela matriz inversa para recuperar o texto original.
+
+Essas funções trabalham em conjunto para realizar a criptografia e descriptografia, utilizando operações de álgebra linear para transformar os textos. O fluxo principal envolve cálculos matemáticos para preparar a matriz-chave e as operações de cifragem e decifragem para manipular o texto.
